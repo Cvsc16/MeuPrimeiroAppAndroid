@@ -1,4 +1,4 @@
-package com.dev.caiovinicius.meuprimeiroappandroid
+package com.dev.caiovinicius.meuprimeiroappandroid.ui
 
 import android.content.Context
 import java.lang.ref.WeakReference

@@ -1,12 +1,12 @@
-package com.dev.caiovinicius.meuprimeiroappandroid
+package com.dev.caiovinicius.meuprimeiroappandroid.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
+import com.dev.caiovinicius.meuprimeiroappandroid.R
 import com.dev.caiovinicius.meuprimeiroappandroid.databinding.FragmentBlankBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -16,19 +16,24 @@ private const val ARG_PARAM2 = "age"
 private const val ARG_PARAM3 = "isMale"
 
 /**
- * A simple [Fragment] subclass.
+ * A simple [Fragment] subclass.param1
  * Use the [BlankFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
 class BlankFragment : Fragment() {
     private var _binding: FragmentBlankBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    // The property is only valid between onCreateView and onDestroyView.
     private val binding get() = _binding!!
+
+    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: Int? = null
     private var param3: Boolean? = null
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,17 +72,13 @@ class BlankFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         binding.tvFragmentContent.text = getString(
             R.string.name_age_is_male,
             param1,
             param2.toString(),
             if (param3 == true) "Masculino" else "Feminino"
-        )
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        ).trimIndent()
     }
 
     companion object {
