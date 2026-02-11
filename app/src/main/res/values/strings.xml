@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">MeuPrimeiroAppAndroid</string>
-    <string name="meu_primeiro_app_android">Meu Primeiro App Android</string>
+    <string name="my_first_android_app">Meu primeiro App Android!</string>
+    <string name="meu_primeiro_app_android">Meu primeiro App Android</string>
     <string name="android_logo">Android Logo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_age_is_male">\nNome: %1$s\nIdade: %2$s anos\nSexo: %3$s</string>
+    <string name="ir_para_activity2">Ir para Activity2</string>
 </resources>
